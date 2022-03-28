@@ -26,9 +26,9 @@ GitHub Action that retrieves a Slack username for the author of the most recent 
 
 ## Inputs
 
-### `email`
+### `username`
 
-**Required** The email to convert to slack user. *Defaults to whomever pushed the last commit*
+**Required** The username to convert to slack user. *Defaults to whomever pushed the last commit*
 
 ### `slack-token`
 
