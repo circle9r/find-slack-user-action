@@ -12,15 +12,18 @@ async function run() {
 			return
 		}
 
-		let success = true;
+		let success = false;
 		let member = {};
-		const response = await slack.users.list({ token: slackToken }).catch(err => { success = false })
+		const response = await slack.users.list({ token: slackToken }).catch(console.error)
 		if (response?.members) {
 			const list = response.members;
 			const names = list.map(n => String(n.real_name).toLowerCase());
 			const search = String(username).toLowerCase();
 			const index = names.findIndex(n => n === search);
 			member = list[index];
+			if (member) {
+				success = true;
+			}
 		}
 
 		core.setOutput("found-user", success)
