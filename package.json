@@ -1,6 +1,6 @@
 {
 	"name": "find-slack-user-action",
-	"version": "1.0.3",
+	"version": "1.1.0",
 	"description": "GitHub Action to lookup slack user by github username.",
 	"keywords": [
 		"github-actions"
